@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mcronalds.order.controller.IUpdateOrderStatus;
 import com.mcronalds.order.exceptions.InvalidInputException;
-import com.mcronalds.order.exceptions.OrderUpdateException;
 import com.mcronalds.order.model.Header;
 import com.mcronalds.order.model.OrderStatus;
 import com.mcronalds.order.service.IOrderUpdateService;
