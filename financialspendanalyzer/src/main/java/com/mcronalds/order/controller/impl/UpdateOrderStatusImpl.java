@@ -35,16 +35,11 @@ public class UpdateOrderStatusImpl implements IUpdateOrderStatus {
 		Header header = new Header();
 
 		if (UpdateOrderStatusValidator.validate(orderID, orderStatus)) {
-			try {
 				Optional<Boolean> updateResponse = orderUpdateService.updateOrderStatus(orderID, orderStatus);
 				if (updateResponse.isPresent() && updateResponse.get()) {
 					header.setCode("0000");
 					header.setDescription("Status updated successfully");
 				}
-			} catch (Exception anyOtherException) {
-				throw new OrderUpdateException();
-			}
-
 		} else {
 			throw new InvalidInputException();
 		}

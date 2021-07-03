@@ -26,8 +26,8 @@ public class OrderExceptionHandler {
 	}
 	
 	//handles if any error occurs while updating
-	@ExceptionHandler(value = OrderUpdateException.class)
-	public ResponseEntity<Header> orderUpdateException(OrderUpdateException orderUpdateException){
+	@ExceptionHandler(value = Exception.class)
+	public ResponseEntity<Header> orderUpdateException(Exception orderUpdateException){
 		
 		Header header = new Header();
 		header.setCode("5000");
