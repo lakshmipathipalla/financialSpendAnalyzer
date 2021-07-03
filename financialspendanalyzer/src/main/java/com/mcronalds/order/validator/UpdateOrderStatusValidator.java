@@ -1,7 +1,6 @@
 package com.mcronalds.order.validator;
 
 import java.util.Arrays;
-import java.util.EnumSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,7 +32,7 @@ public class UpdateOrderStatusValidator {
 		return false;
 	}
 
-	// valide if order has only digits
+	// validate if order has only digits
 	public static boolean hasOnlyDigits(String str) {
 
 		String regex = "[0-9]+";
